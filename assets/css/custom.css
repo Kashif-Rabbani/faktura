@@ -1,0 +1,8 @@
+.draggable-placeholder {
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    height: 3rem;
+}
+.draggable-handle {
+    cursor: move;
+}
