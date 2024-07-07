@@ -1,0 +1,714 @@
+@font-face {
+    font-family: OCRB;
+    font-style: normal;
+    font-weight: normal;
+    src: url(https://www.fakturan.nu/assets/ocr/OCRB-176e4cf0f6fb1043253f46028e6f32d3db9693108ebba7c5f8c743ba46afb3e8.woff2) format("woff2"), url(https://www.fakturan.nu/assets/ocr/OCRB-bb63e8fa36e798546bbd118ab1135ca55caa0cfbbe4a455468304d6fc001f7b3.woff) format("woff")
+}
+
+@font-face {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    src: url(https://www.fakturan.nu/assets/helvetica/helvetica-a4756f18df38a0c791b64a5d0c835bf46b94c7d02e07bfedfaa57574769d93fa.woff) format("woff"), url(https://www.fakturan.nu/assets/helvetica/helvetica-ad5eb02d1cab82c072797b98e5b0fcfeddf7a92b2c64495ea9eb0a1c66f14c8e.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    src: url(https://www.fakturan.nu/assets/helvetica/helvetica-bold-6c889223a4fad2bf5f1d23ed24f6493d72f2df6779cd8246462d5896fdbb19e0.woff) format("woff"), url(https://www.fakturan.nu/assets/helvetica/helvetica-bold-9522eb5b67159e5069508ca60954a300e04aec860e91267d580ff4555ce59959.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: ProximaNova;
+    font-style: normal;
+    font-weight: normal;
+    src: url(https://www.fakturan.nu/assets/proxima-nova/proxima-nova-regular-8a02077892d7b40eeff4c9c0c2393403038b09e6e80d99112bef42eb681d7bd6.woff2) format("woff2"), url(https://www.fakturan.nu/assets/proxima-nova/proxima-nova-regular-cbf84deda771778cb35dbd8c66310dd65549cbc8aa66d00264fcf1c3ea73cbee.woff) format("woff")
+}
+
+@font-face {
+    font-family: ProximaNova;
+    font-style: normal;
+    font-weight: bold;
+    src: url(https://www.fakturan.nu/assets/proxima-nova/proxima-nova-bold-b5732b52c243a51757aa4504104e64ba2fb43b96299b2badfa5aa05b89615849.woff2) format("woff2"), url(https://www.fakturan.nu/assets/proxima-nova/proxima-nova-bold-fc609d33d4c29c195f86e9f12ee1f076a6e0f0ee3004f0eeaa7748ff91866ada.woff) format("woff")
+}
+
+@font-face {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    src: url(https://www.fakturan.nu/assets/lato/lato-regular-6340ab77496676e6bfc031f963c7ca297097186d5306477fe75f6385b366b4e6.woff2) format("woff2"), url(https://www.fakturan.nu/assets/lato/lato-regular-5e5ff49b5169cb1a0649c084794ead30fe58ccb6aa54e6ee0ef160f6719d1fdb.woff) format("woff")
+}
+
+@font-face {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    src: url(https://www.fakturan.nu/assets/lato/lato-bold-82fef11d0128009ba70eaa71853a616a3e1eb0828139fe56c6b3d92915de0409.woff2) format("woff2"), url(https://www.fakturan.nu/assets/lato/lato-bold-d4731cb3b717a61f773cdcf7571307d3294ebb2d8c2e18eae4952ad247aa3d91.woff) format("woff")
+}
+
+/*! custom reset */
+table, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    word-break: break-word
+}
+
+ul, ol, dl {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+dl {
+    display: flex;
+    flex-flow: column
+}
+
+dl dt {
+    font-weight: bold
+}
+
+dl dt:not(:first-of-type) {
+    margin-top: 0.3125rem
+}
+
+dl dd {
+    margin: 0
+}
+
+dl:not(.row) dd {
+    margin-top: 0.25rem
+}
+
+dl.row {
+    display: flex;
+    flex-flow: row wrap
+}
+
+dl.row dt, dl.row dd {
+    flex: 1 0 auto;
+    flex-basis: calc(50% - 0.3127rem)
+}
+
+dl.row dt {
+    margin-right: 0.625rem
+}
+
+dl.row dd {
+    align-self: stretch
+}
+
+dl.row dt:not(:first-of-type), dl.row dd:not(:first-of-type) {
+    margin-top: 0.25rem
+}
+
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold
+}
+
+img {
+    display: block
+}
+
+p {
+    margin: 1rem 0 0 0;
+    padding: 0
+}
+
+p.right {
+    text-align: right
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4em;
+    font-weight: normal
+}
+
+h1, h2, h3 {
+    font-weight: bold
+}
+
+table {
+    width: 100%
+}
+
+.separate {
+    justify-content: space-between
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    font-size: 2.0vw
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.8125rem;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.2
+}
+
+.page, .flyleaf {
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 1px);
+    height: calc(141.43vw - 1.4mm);
+    padding: 2.375rem 4.25rem 4.25rem
+}
+
+.page > header, .page > footer, .page > .container, .flyleaf > header, .flyleaf > footer, .flyleaf > .container {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto
+}
+
+.page > header .title, .flyleaf > header .title {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 4.875rem;
+    justify-content: space-between
+}
+
+.page > header .title div, .flyleaf > header .title div {
+    flex: 0 0 auto
+}
+
+.page > .content, .page > footer, .page > .container, .flyleaf > .content, .flyleaf > footer, .flyleaf > .container {
+    margin-top: 0.625rem
+}
+
+.page > .content, .flyleaf > .content {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+    flex-basis: 13.5rem;
+    align-self: stretch;
+    justify-content: space-between;
+    overflow: hidden
+}
+
+.page > .content > div, .flyleaf > .content > div {
+    flex: 0 0 auto
+}
+
+.page.not-last-page .sums, .flyleaf.not-last-page .sums {
+    display: none
+}
+
+.page.not-last-page .iconic-payment-info, .flyleaf.not-last-page .iconic-payment-info {
+    display: none
+}
+
+.sums, .pagination {
+    margin-top: 1.5625rem;
+    text-align: right;
+    vertical-align: bottom;
+    flex: 0 0 auto;
+    align-self: stretch
+}
+
+.last-page .sums {
+    margin-top: 0
+}
+
+.sums {
+    display: flex
+}
+
+.pagination {
+    font-weight: bold;
+    display: none
+}
+
+.not-last-page .pagination {
+    display: block
+}
+
+.flyleaf {
+    font-size: 1rem
+}
+
+.flyleaf > header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.return-address {
+    flex: 0 0 14.1875rem;
+    margin-left: 2.375rem;
+    height: 8.4375rem
+}
+
+.client-address {
+    flex: 0 0 18.1875rem;
+    margin-top: 5.9375rem;
+    height: 8.4375rem
+}
+
+.flyleaf-message {
+    flex: 1 0 37.8125rem;
+    margin-left: 2.375rem
+}
+
+.flyleaf-message p {
+    margin: 0
+}
+
+.container {
+    padding: 0.625rem;
+    position: relative
+}
+
+.structure {
+    display: flex;
+    align-items: stretch
+}
+
+.structure:not(:first-child) {
+    margin-top: 0.625rem
+}
+
+.structure > div {
+    flex: 1 1 auto
+}
+
+.structure > div:not(:first-child) {
+    margin-left: 0.625rem
+}
+
+.structure.golden > div:first-child {
+    width: 66.67%
+}
+
+.structure.golden > div:last-child {
+    width: 33.33%
+}
+
+.invoice-content {
+    border-spacing: 0;
+    border-collapse: separate
+}
+
+.invoice-content thead {
+    font-weight: bold
+}
+
+.invoice-content td, .invoice-content th {
+    padding: 0.125rem 1em;
+    vertical-align: top
+}
+
+.invoice-content td.nowrap, .invoice-content th.nowrap {
+    white-space: nowrap
+}
+
+.invoice-content td.wrappable, .invoice-content th.wrappable {
+    word-break: break-word;
+    white-space: pre-wrap
+}
+
+.invoice-content td.text-right, .invoice-content th.text-right {
+    text-align: right
+}
+
+.invoice-content th {
+    text-align: left;
+    white-space: nowrap
+}
+
+.invoice-content tr.text td {
+    text-align: left;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem
+}
+
+.invoice-content p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.4em
+}
+
+.invoice-content p:last-child {
+    margin-bottom: 0
+}
+
+.invoice-content td:last-child, .invoice-content th:last-child {
+    text-align: right
+}
+
+.invoice-content td {
+    width: var(--cell-width);
+    border: 0px transparent
+}
+
+.new_payment_details {
+    position: relative
+}
+
+.new_payment_details p {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+
+.has-flex-end {
+    align-self: flex-end
+}
+
+.new_payment_details .attention {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    transform: rotate(0);
+    padding: 0.125rem 0.25rem;
+    background: #C71300;
+    color: #fff;
+    border: 0.25rem solid #C71300;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    font-weight: bold
+}
+
+.new_payment_details .attention:before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: -0.125rem;
+    left: -0.125rem;
+    right: -0.125rem;
+    bottom: -0.125rem;
+    border: 0.125rem solid #fff;
+    border-radius: 0.25rem
+}
+
+.payee {
+    font-size: 0.7rem
+}
+
+.sums {
+    flex: 1 1 auto;
+    margin-top: 1rem;
+    flex-flow: column;
+    align-items: flex-end
+}
+
+.sums ul {
+    display: table;
+    flex: 0 0 auto
+}
+
+.sums li {
+    display: table-row;
+    flex-flow: row nowrap;
+    justify-content: flex-end
+}
+
+.sums li > div {
+    width: auto;
+    display: table-cell
+}
+
+.sums li > div:first-child::after {
+    content: ':';
+    margin-right: 1rem
+}
+
+.totals {
+    margin-top: 1rem;
+    width: 100%
+}
+
+.page > footer .structure {
+    justify-content: space-between;
+    flex-flow: row wrap
+}
+
+.page > footer .structure > div:not(:first-child), .page > footer .structure:not(:first-child) {
+    margin-left: 0
+}
+
+.page > footer .structure > div {
+    flex: 0 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto
+}
+
+.page > footer .structure > div dl {
+    width: 100%
+}
+
+.container.ocr {
+    padding: 1rem
+}
+
+.container.ocr h4 {
+    font-size: 0.6rem;
+    margin-bottom: 1.25rem
+}
+
+.container.ocr code {
+    font-family: OCRB
+}
+
+.ad .structure {
+    justify-content: flex-start
+}
+
+.ad .structure p {
+    margin: 0
+}
+
+.ad .structure div {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center
+}
+
+.ad .structure div:first-child {
+    flex-grow: 0;
+    flex-shrink: 0
+}
+
+.ad .structure div:nth-child(2) {
+    margin-left: 1.875rem
+}
+
+.document-text .structure p, footer .structure p {
+    margin: 0
+}
+
+@media print {
+    @page {
+        margin: 0
+    }
+
+    html, body {
+        background-color: #fff
+    }
+
+    body {
+        -webkit-print-color-adjust: exact
+    }
+
+    .page {
+        background-color: #fff;
+        box-shadow: none;
+        margin: 0 auto;
+        -moz-column-break-after: always;
+        break-after: always
+    }
+}
+
+.emoji {
+    display: inline-block
+}
+
+.page > header .title h1, .page > header .title h2 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #5f9ce1
+}
+
+.page > header .title img {
+    max-width: 100%;
+    max-height: 4.875rem
+}
+
+.page > header .title h1 {
+    font-size: 2rem;
+    font-weight: normal;
+    font-style: italic
+}
+
+.page > header .title h2 {
+    text-align: right;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc
+}
+
+.page > header .title > div:last-child {
+    text-align: right
+}
+
+.page > header .structure.header > div:first-child {
+    flex: 1 0 21.25rem
+}
+
+.page > header .structure.header > div:last-child {
+    flex: 0 0 15.625rem
+}
+
+.page > .content, .page > footer, .page > .container {
+    margin-top: 0.9375rem
+}
+
+.container {
+    padding: 0.8125rem;
+    border: 0.125rem solid #ccc;
+    border-radius: 0.625rem
+}
+
+.container.ocr {
+    border: 0;
+    border-radius: 0;
+    background: #efefef
+}
+
+.container header h3 {
+    background-color: #5f9ce1;
+    color: #fff;
+    padding: 0.3125rem 0.5625rem;
+    border-radius: 0.375rem;
+    font-size: 0.8125rem;
+    margin-bottom: 0.625rem
+}
+
+.container header p {
+    margin: 0;
+    padding: 0.5rem 0.3125rem
+}
+
+.container-thin {
+    padding: 0.5rem
+}
+
+.sums {
+    margin-top: 0
+}
+
+.pagination {
+    padding-right: 0.3125rem
+}
+
+.sums ul {
+    padding-right: 0.3125rem
+}
+
+.totals {
+    border-top: 1px dashed #ccc;
+    padding: 0.3125rem 0.3125rem 0
+}
+
+.referals {
+    min-width: 5.0rem
+}
+
+.invoice-content thead {
+    color: #fff;
+    background-color: #5f9ce1
+}
+
+.invoice-content thead tr {
+    border-radius: 0.375rem
+}
+
+.invoice-content th {
+    padding: 0.3125rem 0.5625rem
+}
+
+.invoice-content th:first-child {
+    border-radius: 0.375rem 0 0 0.375rem
+}
+
+.invoice-content th:last-child {
+    border-radius: 0 0.375rem 0.375rem 0
+}
+
+.invoice-content td {
+    padding: 0.125rem 0.3125rem
+}
+
+.invoice-content tbody tr:first-child td {
+    padding-top: 0.5rem
+}
+
+footer .structure > div {
+    padding: 0.3125rem 0 0 0.3125rem
+}
+
+footer p {
+    margin: 0 0 0.3125rem
+}
+
+footer .container-thin {
+    padding-right: 0.8125rem;
+    padding-bottom: 0.8125rem
+}
+
+.not-last-page .sums, .not-last-page .document-text {
+    display: none
+}
+
+.ad {
+    display: flex;
+    align-items: center
+}
+
+.ad p {
+    margin: 0 0 0 1.0625rem
+}
+
+body {
+    padding-bottom: 7px
+}
+
+.page {
+    background-color: #fff;
+    box-shadow: 3px 3px 7px rgba(170, 178, 189, 0.2);
+    border-radius: 4px;
+    border: 1px solid #CCD1D9
+}
+
+.page:not(:first-child) {
+    margin-top: 40px
+}
+
+.invoice-logo-ad a svg {
+    height: 1.9em;
+    width: auto;
+    margin-top: 0.3em
+}
+
+.page > header .title h1, .page > header .title h2 {
+    color: #5F9CE1
+}
+
+.page > header .title h2, .container, .totals {
+    border-color: #DDDDDD
+}
+
+.container header h3, .invoice-content thead {
+    background-color: #5F9CE1
+}
+
